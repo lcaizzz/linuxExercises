@@ -7,5 +7,5 @@ cat Property_Tax_Roll.csv | grep "MADISON SCHOOLS" | cut -d ',' -f 7 | {
         count=$((count + 1))
     done
     echo "Sum: $sum"
-    echo "Average: $(bc <<< "scale=2; $sum / $count")"
+    echo "Average: $((sum / count))"
 }
